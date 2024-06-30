@@ -46,6 +46,6 @@ sealed class ClientAnswer {
     ) : ClientAnswer()
 
     companion object {
-        const val TABLE_NAME = "client_rate"
+        const val TABLE_NAME = "client_answer"
     }
 }
