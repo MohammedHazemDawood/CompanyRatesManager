@@ -8,9 +8,6 @@ import kotlin.reflect.jvm.jvmName
 sealed class CompanyRateSet {
     abstract val id: Int
 
-    @SerialName("is_deleted")
-    abstract val isDeleted: Boolean
-
     abstract val question: String
 
     abstract val type: String
@@ -18,8 +15,6 @@ sealed class CompanyRateSet {
     @Serializable
     data class TextQuestion(
         override val id: Int = 0,
-        @SerialName("is_deleted")
-        override val isDeleted: Boolean = false,
         override val question: String,
         override val type: String
     ) : CompanyRateSet()
@@ -27,8 +22,6 @@ sealed class CompanyRateSet {
     @Serializable
     data class NumberQuestion(
         override val id: Int = 0,
-        @SerialName("is_deleted")
-        override val isDeleted: Boolean = false,
         override val question: String,
         val start: Int,
         val end: Int,
@@ -38,8 +31,6 @@ sealed class CompanyRateSet {
     @Serializable
     data class MultiChoiceQuestion(
         override val id: Int = 0,
-        @SerialName("is_deleted")
-        override val isDeleted: Boolean = false,
         override val question: String,
         val choices: List<String>,
         override val type: String

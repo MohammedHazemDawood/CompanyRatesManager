@@ -11,7 +11,7 @@ sealed class ClientAnswer {
     abstract val createdAt: String
 
     @SerialName("question_id")
-    abstract val questionId: Int
+    abstract val questionId: Int?
 
     abstract val type: String
 
@@ -19,7 +19,7 @@ sealed class ClientAnswer {
     data class TextAnswer(
         override val id: Int = 0,
         override val createdAt: String,
-        override val questionId: Int,
+        override val questionId: Int?,
         @SerialName("text_feedback")
         val answer: String,
         override val type: String
@@ -29,7 +29,7 @@ sealed class ClientAnswer {
     data class NumberAnswer(
         override val id: Int = 0,
         override val createdAt: String,
-        override val questionId: Int,
+        override val questionId: Int?,
         @SerialName("range_value")
         val answer: Int,
         override val type: String
@@ -39,7 +39,7 @@ sealed class ClientAnswer {
     data class MultiChoiceAnswer(
         override val id: Int = 0,
         override val createdAt: String,
-        override val questionId: Int,
+        override val questionId: Int?,
         @SerialName("choice")
         val answer: String,
         override val type: String

@@ -10,7 +10,6 @@ data class CompanyRateSetEntity(
     val id: Int,
     val question: String,
     val type: String,
-    val isDeleted: Boolean = false,
     val start: Int?,
     val end: Int?,
     val choices: List<String>?

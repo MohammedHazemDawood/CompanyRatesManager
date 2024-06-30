@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.mohammed.hazem.smart_apps.company_ratesmanager.data.util.ListConverters
 import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientAnswerEntity
 import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientRateEntity
 import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.CompanyRateSetEntity
@@ -13,6 +15,7 @@ import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.Co
     version = 1,
     exportSchema = false
 )
+@TypeConverters(ListConverters::class)
 abstract class RatesDatabase : RoomDatabase() {
     abstract fun ratesDao(): RatesDao
 
