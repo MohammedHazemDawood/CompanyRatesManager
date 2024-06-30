@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -14,6 +16,19 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+
+
+        //load the values from .properties file
+        val keystoreFile = project.rootProject.file("local.properties")
+        val properties = Properties()
+        properties.load(keystoreFile.inputStream())
+
+
+        val supabaseUrl = properties["supabaseUrl"]
+        val supabaseKey = properties["supabaseKey"]
+
+        buildConfigField("String", "SUPABASE_URL", "\"${supabaseUrl}\"")
+        buildConfigField("String", "SUPABASE_KEY", "\"${supabaseKey}\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
