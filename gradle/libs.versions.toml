@@ -2,6 +2,8 @@
 agp = "8.5.0"
 bom = "2.5.0"
 credentialsVersion = "1.2.2"
+hiltAndroid = "2.44"
+hiltAndroidCompiler = "2.44"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -13,11 +15,14 @@ lifecycleRuntimeKtx = "2.8.2"
 activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 room_version = "2.6.1"
+hilt_v = "2.44"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "credentialsVersion" }
 androidx-credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentialsVersion" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientLoggingJvm" }
 supabase-jantennert-bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "bom" }
 googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version = "1.1.0" }
@@ -43,3 +48,4 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-dagger-hilt = {id = "com.google.dagger.hilt.android", version.ref="hilt_v"}

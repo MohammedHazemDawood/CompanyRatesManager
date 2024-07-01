@@ -2,12 +2,11 @@ package com.mohammed.hazem.smart_apps.company_ratesmanager.data.source
 
 import androidx.room.Dao
 import androidx.room.Delete
-import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Upsert
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientAnswerEntity
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientRateEntity
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.CompanyRateSetEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.ClientAnswerEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.ClientRateEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.CompanyRateSetEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -18,7 +17,7 @@ interface RatesDao {
     fun getAllCompanyRateSets(): Flow<List<CompanyRateSetEntity>>
 
     @Query("SELECT * FROM client_answer")
-    fun getAllClientRatesOnce(): Flow<List<ClientAnswerEntity>>
+    fun getAllClientAnswers(): Flow<List<ClientAnswerEntity>>
 
     @Query("SELECT * FROM client_rate")
     fun getAllClientRates(): Flow<List<ClientRateEntity>>

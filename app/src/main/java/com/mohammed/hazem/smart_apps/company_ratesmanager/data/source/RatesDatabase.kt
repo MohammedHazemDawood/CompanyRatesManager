@@ -6,9 +6,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.mohammed.hazem.smart_apps.company_ratesmanager.data.util.ListConverters
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientAnswerEntity
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.ClientRateEntity
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local.CompanyRateSetEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.ClientAnswerEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.ClientRateEntity
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module.CompanyRateSetEntity
 
 @Database(
     entities = [CompanyRateSetEntity::class, ClientAnswerEntity::class, ClientRateEntity::class],

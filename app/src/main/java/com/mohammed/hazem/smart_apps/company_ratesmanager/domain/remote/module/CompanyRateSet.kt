@@ -1,8 +1,6 @@
-package com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module
+package com.mohammed.hazem.smart_apps.company_ratesmanager.domain.remote.module
 
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlin.reflect.jvm.jvmName
 
 @Serializable
 sealed class CompanyRateSet {

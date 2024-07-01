@@ -1,9 +1,9 @@
-package com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.local
+package com.mohammed.hazem.smart_apps.company_ratesmanager.domain.local.module
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.module.ClientRateSupabseTable
+import com.mohammed.hazem.smart_apps.company_ratesmanager.domain.remote.module.ClientRateSupabseTable
 
 @Entity(tableName = ClientRateSupabseTable.TABLE_NAME)
 data class ClientRateEntity(
